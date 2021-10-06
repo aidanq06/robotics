@@ -24,58 +24,55 @@
 using namespace vex;
 
 void autonomous(void) {
+
   Brain.Screen.print("start");
-  backLeft.spin(forward, 200, rpm);
-  frontLeft.spin(forward, 200, rpm);
-  backRight.spin(forward, 200, rpm);
-  frontRight.spin(forward, 200, rpm);
-  
-  wait(.2,sec);
 
-  frontLeft.stop();
-  backLeft.stop();
-  backRight.stop();
-  frontRight.stop();
-
-  clawLifter.spin(reverse,200, rpm);
-  wait(.5,sec);
-  clawLifter.stop();
-  
-  backLeft.spin(forward, 200, rpm);
-  frontLeft.spin(forward, 200, rpm);
-  backRight.spin(forward, 200, rpm);
-  frontRight.spin(forward, 200, rpm);
-  
-  wait(.2,sec);
-
-  frontLeft.stop();
-  backLeft.stop();
-  backRight.stop();
-  frontRight.stop();
-
-  clawOpener.spin(reverse,200,rpm);
-  wait(1,sec);
-
-  backLeft.spin(reverse, 200, rpm);
-  frontLeft.spin(reverse, 200, rpm);
-  backRight.spin(reverse, 200, rpm);
-  frontRight.spin(reverse, 200, rpm);
-
-  wait(.5,sec);
-  
-
-  frontLeft.stop();
-  backLeft.stop();
-  backRight.stop();
-  frontRight.stop();
-
-  clawLifter.spin(forward,200, rpm);
-  wait(.5,sec);
-  clawLifter.stop();
-
-  clawOpener.spin(forward,200,rpm);
-  wait(1,sec);
+  clawOpener.spin(reverse,100, rpm);
+  wait(0.25,sec);
   clawOpener.stop();
+
+  //closes onto circle thing
+
+  backLeft.spin(forward, 100, rpm);
+  frontLeft.spin(forward, 100, rpm);
+  backRight.spin(forward, 100, rpm);
+  frontRight.spin(forward, 100, rpm);
+
+  wait(0.75,sec);
+
+  frontLeft.stop();
+  backLeft.stop();
+  backRight.stop();
+  frontRight.stop();
+
+  // moves forward 
+
+  clawLifter.spin(forward,100, rpm);
+  wait(1.75,sec);
+  clawLifter.stop();
+  
+  clawOpener.spin(reverse,100,rpm);
+  wait(1.25,sec);
+  clawOpener.stop();
+
+  wait(1,sec);
+
+  clawOpener.spin(reverse,100,rpm);
+  wait(0.25,sec);
+  clawOpener.stop();
+
+  backLeft.spin(reverse, 100, rpm);
+  frontLeft.spin(reverse, 100, rpm);
+  backRight.spin(reverse, 100, rpm);
+  frontRight.spin(reverse, 100, rpm);
+
+  wait(2,sec);
+  
+  frontLeft.stop();
+  backLeft.stop();
+  backRight.stop();
+  frontRight.stop();
+
   }
 
 void controls(void) 
