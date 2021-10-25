@@ -24,7 +24,7 @@
 
 using namespace vex;
 
-void move(int time,string direction)
+void move(int duration,string direction)
 {
   if (direction == "forward") {
     // left motors are spun a little bit more because right motors are stronger for some reason
@@ -34,7 +34,7 @@ void move(int time,string direction)
     backRight.spin(forward, 100, rpm);
     frontRight.spin(forward,100, rpm);
 
-    wait(time,sec);
+    wait(duration,sec);
 
     frontLeft.stop();
     backLeft.stop();
@@ -48,7 +48,7 @@ void move(int time,string direction)
     backRight.spin(reverse,100,rpm);
     frontRight.spin(reverse,100,rpm)
 
-    wait(time,sec);
+    wait(duration,sec);
 
     frontLeft.stop();
     backLeft.stop();
@@ -60,7 +60,7 @@ void move(int time,string direction)
     frontLeft.spin(forward,110,rpm);
     backLeft.spin(forward, 110, rpm);
 
-    wait(time,sec);
+    wait(duration,sec);
 
     frontLeft.stop();
     backLeft.stop();
@@ -70,7 +70,7 @@ void move(int time,string direction)
     frontRight.spin(forward,110,rpm);
     backRight.spin(forward, 110, rpm);
 
-    wait(time,sec);
+    wait(duration,sec);
 
     frontRight.stop();
     backRight.stop();
