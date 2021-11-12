@@ -16,7 +16,7 @@
 // frontRight           motor         10              
 // backRight            motor         18              
 // clawLifter1          motor         9               
-// clawOpener           motor         6               
+// clawOpener           motor         15               
 // clawLifter2          motor         8               
 // ---- END VEXCODE CONFIGURED DEVICES ----
 
